@@ -101,7 +101,7 @@ export default {
    methods:{
        getAlldata:function(){
             var ListAccount = [];
-           axios.get('http://jizhang-api-dev.it266.com/api/account?token='+localStorage.token)
+           axios.get('https://jizhang-api-dev.it266.com/api/account?token='+localStorage.token)
            .then((res)=>{
             //    console.log(res)
                for(var i = 0; i< res.data.data.length; i++){
@@ -124,7 +124,7 @@ export default {
                 "Content-Type":"multipart/form-data"
             }
         }
-        axios.post('http://jizhang-api-dev.it266.com/api/upload/image?token='+localStorage.token,params,config)
+        axios.post('https://jizhang-api-dev.it266.com/api/upload/image?token='+localStorage.token,params,config)
         .then((res)=>{
             console.log(res)
             if(res.data.data.file){
@@ -167,7 +167,7 @@ export default {
             imagesKey += this.PicKey[k].key +","
         }         
         console.log(imagesKey)
-         axios.post('http://jizhang-api-dev.it266.com/api/record/sequel?token='+localStorage.token,qs.stringify({
+         axios.post('https://jizhang-api-dev.it266.com/api/record/sequel?token='+localStorage.token,qs.stringify({
               record_id:localStorage.detailListId,
                 money:this.message,
                 account_id:this.option1[this.value1].accId,

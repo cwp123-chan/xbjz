@@ -137,7 +137,7 @@ export default {
   background-color: #fff;
 }
 .PicBgColor > .van-image--round {
-  margin-left: 90px;
+  margin-left: 103px;
   margin-top: 30px;
 }
 .PicBgColor > .van-uploader {

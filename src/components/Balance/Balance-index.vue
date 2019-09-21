@@ -97,7 +97,7 @@ export default {
       this.show = true;
       axios
         .get(
-          "http://jizhang-api-dev.it266.com/api/book?token=" +
+          "https://jizhang-api-dev.it266.com/api/book?token=" +
             localStorage.token
         )
         .then(res => {
@@ -105,7 +105,7 @@ export default {
         });
       axios
         .get(
-          "http://jizhang-api-dev.it266.com/api/book/get-default?token=" +
+          "https://jizhang-api-dev.it266.com/api/book/get-default?token=" +
             localStorage.token
         )
         .then(response => {
@@ -121,7 +121,7 @@ export default {
         .then(() => {
           axios
             .post(
-              "http://jizhang-api-dev.it266.com/api/book/set-default?token=" +
+              "https://jizhang-api-dev.it266.com/api/book/set-default?token=" +
                 localStorage.token,
               qs.stringify({
                 book_id: book.id
@@ -142,7 +142,7 @@ export default {
     getAccountBook: function() {
       axios
         .get(
-          "http://jizhang-api-dev.it266.com/api/book?token=" +
+          "https://jizhang-api-dev.it266.com/api/book?token=" +
             localStorage.token
         )
         .then(res => {
@@ -150,7 +150,7 @@ export default {
         });
       axios
         .get(
-          "http://jizhang-api-dev.it266.com/api/book/get-default?token=" +
+          "https://jizhang-api-dev.it266.com/api/book/get-default?token=" +
             localStorage.token
         )
         .then(response => {
@@ -166,7 +166,7 @@ export default {
         .then(() => {
           axios
             .post(
-              "http://jizhang-api-dev.it266.com/api/book/delete?token=" +
+              "https://jizhang-api-dev.it266.com/api/book/delete?token=" +
                 localStorage.token,
               qs.stringify({
                 book_id: delbook.id
@@ -181,7 +181,7 @@ export default {
               // 重新刷新页面
               axios
                 .get(
-                  "http://jizhang-api-dev.it266.com/api/book/get-default?token=" +
+                  "https://jizhang-api-dev.it266.com/api/book/get-default?token=" +
                     localStorage.token
                 )
                 .then(response => {
@@ -206,7 +206,7 @@ export default {
     pushUpdata: function() {
       axios
         .post(
-          "http://jizhang-api-dev.it266.com/api/book/update?token=" +
+          "https://jizhang-api-dev.it266.com/api/book/update?token=" +
             localStorage.token,
           qs.stringify({
             book_id: localStorage.upBookId,
@@ -223,7 +223,7 @@ export default {
           // 重新刷新页面
           axios
             .get(
-              "http://jizhang-api-dev.it266.com/api/book/get-default?token=" +
+              "https://jizhang-api-dev.it266.com/api/book/get-default?token=" +
                 localStorage.token
             )
             .then(response => {
@@ -249,7 +249,7 @@ export default {
       console.log(this.CreateInfo);
       axios
         .post(
-          "http://jizhang-api-dev.it266.com/api/book/create?token=" +
+          "https://jizhang-api-dev.it266.com/api/book/create?token=" +
             localStorage.token,
           qs.stringify({
             name: this.CreateInfo
@@ -269,7 +269,7 @@ export default {
           // 重新刷新页面
           axios
             .get(
-              "http://jizhang-api-dev.it266.com/api/book/get-default?token=" +
+              "https://jizhang-api-dev.it266.com/api/book/get-default?token=" +
                 localStorage.token
             )
             .then(response => {

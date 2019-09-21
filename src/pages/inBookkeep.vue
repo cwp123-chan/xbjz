@@ -135,7 +135,7 @@ export default {
   },
   methods:{
       getBookeepClass:function(){
-          axios.get('http://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
+          axios.get('https://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
                         params:{
                             type:'1',
                         dataType:'1'
@@ -161,14 +161,14 @@ export default {
         this.show = true;
       },
       togetInBook:function(){
-          axios.post('http://jizhang-api-dev.it266.com/api/category/create?token='+localStorage.token,qs.stringify({
+          axios.post('https://jizhang-api-dev.it266.com/api/category/create?token='+localStorage.token,qs.stringify({
                 parent_id:0,
                 type :1,
                 name:this.message,
                 sort:10 
             }))
             .then((res)=>{                       
-                axios.get('http://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
+                axios.get('https://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
                     params:{
                         type:'1',
                     dataType:'1'
@@ -183,7 +183,7 @@ export default {
       },
       togetSonInBook:function(){
           console.log(this.parentId)
-          axios.post('http://jizhang-api-dev.it266.com/api/category/create?token='+localStorage.token,qs.stringify({
+          axios.post('https://jizhang-api-dev.it266.com/api/category/create?token='+localStorage.token,qs.stringify({
                 parent_id:this.parentId,
                 type :1,
                 name:this.parentMsg3,
@@ -197,11 +197,11 @@ export default {
       },
       todelSonInBook:function(){
           console.log(this.parentId)
-        axios.post('http://jizhang-api-dev.it266.com/api/category/delete?id='+this.parentId+'&token='+localStorage.token)
+        axios.post('https://jizhang-api-dev.it266.com/api/category/delete?id='+this.parentId+'&token='+localStorage.token)
         .then((res)=>{
             console.log(res)
             if(res.data.code == 0){
-                axios.get('http://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
+                axios.get('https://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
                     params:{
                         type:'1',
                     dataType:'1'

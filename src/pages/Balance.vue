@@ -107,7 +107,7 @@ export default {
   },
   methods:{
      getData(){
-         axios.get('http://jizhang-api-dev.it266.com/api/record/account?token='+localStorage.token,{
+         axios.get('https://jizhang-api-dev.it266.com/api/record/account?token='+localStorage.token,{
               params:{
               }
           })
@@ -125,7 +125,7 @@ export default {
                this.morMoney = this.inMoney-this.outMoney
         })
 
-         axios.get('http://jizhang-api-dev.it266.com/api/record/account/waiting?token='+localStorage.token,{
+         axios.get('https://jizhang-api-dev.it266.com/api/record/account/waiting?token='+localStorage.token,{
               params:{
                  type:'1'
               }
@@ -134,7 +134,7 @@ export default {
                this.paidMoney = res.data.data.total             
           })
 
-          axios.get('http://jizhang-api-dev.it266.com/api/record/account/waiting?token='+localStorage.token,{
+          axios.get('https://jizhang-api-dev.it266.com/api/record/account/waiting?token='+localStorage.token,{
               params:{
                  type:'2'
               }

@@ -88,7 +88,7 @@ export default {
 }
 .xianzhi>.van-tabbar-item{
   margin-left: 30%;
-  margin-top: 2%;
+  margin-top: 6%;
 }
 .van-tabbar-item-son{
   position:absolute;

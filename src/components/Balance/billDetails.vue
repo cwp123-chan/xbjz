@@ -301,7 +301,7 @@ export default {
       var detailListId = localStorage.detailListId;
       axios
         .get(
-          "http://jizhang-api-dev.it266.com/api/record/detail?id=" +
+          "https://jizhang-api-dev.it266.com/api/record/detail?id=" +
             detailListId +
             "&token=" +
             localStorage.token
@@ -361,7 +361,7 @@ export default {
         .then(() => {
           axios
             .post(
-              "http://jizhang-api-dev.it266.com/api/record/delete?id=" +
+              "https://jizhang-api-dev.it266.com/api/record/delete?id=" +
                 this.$route.params.detialId +
                 "&token=" +
                 localStorage.token
@@ -388,7 +388,7 @@ export default {
       this.moneyshow = false      
     },
     pushMoneyshow(){
-      axios.post('http://jizhang-api-dev.it266.com/api/record/item/update?itemId='+this.moneyLocalId+'&token='+localStorage.token,qs.stringify({
+      axios.post('https://jizhang-api-dev.it266.com/api/record/item/update?itemId='+this.moneyLocalId+'&token='+localStorage.token,qs.stringify({
         money:this.moneyMsg
       }))
       .then((res)=>{
@@ -406,7 +406,7 @@ export default {
     updataTheAccount(money){
       this.Accountshow = true
       this.moneyLocalId = money.id
-      axios.get('http://jizhang-api-dev.it266.com/api/account?token='+localStorage.token)
+      axios.get('https://jizhang-api-dev.it266.com/api/account?token='+localStorage.token)
       .then((res)=>{
         // console.log(res)
       })
@@ -419,7 +419,7 @@ export default {
     pushAccountshow(){
       // 功能待完善
       // console.log(this.AccountMsg)
-      //   axios.post('http://jizhang-api-dev.it266.com/api/record/item/update?itemId='+this.moneyLocalId+'&token='+localStorage.token,qs.stringify({
+      //   axios.post('https://jizhang-api-dev.it266.com/api/record/item/update?itemId='+this.moneyLocalId+'&token='+localStorage.token,qs.stringify({
       //     // money:this.moneyMsg
       //   }))
       //   .then((res)=>{
@@ -442,7 +442,7 @@ export default {
     },
     pushDateshow(){
       let date = moment(this.dateMsg).format('YYYY-MM-DD')
-       axios.post('http://jizhang-api-dev.it266.com/api/record/item/update?itemId='+this.moneyLocalId+'&token='+localStorage.token,qs.stringify({
+       axios.post('https://jizhang-api-dev.it266.com/api/record/item/update?itemId='+this.moneyLocalId+'&token='+localStorage.token,qs.stringify({
         date:date
       }))
       .then((res)=>{

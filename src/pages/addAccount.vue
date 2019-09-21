@@ -63,7 +63,7 @@ export default {
      addAccountPage:function(){
         console.log(localStorage.token)
         console.log(this.value1)
-         axios.post('http://jizhang-api-dev.it266.com/api/account/create?token='+localStorage.token,qs.stringify({
+         axios.post('https://jizhang-api-dev.it266.com/api/account/create?token='+localStorage.token,qs.stringify({
                         name:this.message,
                         type:this.value1,
                         initial_balance:this.init,

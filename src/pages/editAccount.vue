@@ -54,7 +54,7 @@ export default {
      addAccountPage:function(){
         console.log(localStorage.AccountItemId,localStorage.token)
         console.log(this.message)
-         axios.post('http://jizhang-api-dev.it266.com/api/account/update?id='+localStorage.AccountItemId+'&token='+localStorage.token,qs.stringify({
+         axios.post('https://jizhang-api-dev.it266.com/api/account/update?id='+localStorage.AccountItemId+'&token='+localStorage.token,qs.stringify({
                         name:this.message,
                         type:this.value1,
                         remark:'新增',

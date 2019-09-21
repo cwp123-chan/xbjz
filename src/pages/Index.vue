@@ -137,7 +137,7 @@ export default {
        getTheAllData(){
            var date = new Date();
           var theDate = moment(date).format('YYYY-MM-DD')
-        axios.get('http://jizhang-api-dev.it266.com/api/record/account?token='+localStorage.token,{
+        axios.get('https://jizhang-api-dev.it266.com/api/record/account?token='+localStorage.token,{
                     params:{
                         begin_date:"2019-01-01",
                         end_date:theDate

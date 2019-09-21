@@ -123,7 +123,7 @@ export default {
             for(let k = 0 ; k < this.PicKey.length ; k++){
                 imagesKey += this.PicKey[k].key +","
             } 
-         axios.post('http://jizhang-api-dev.it266.com/api/record/create?token='+localStorage.token,qs.stringify({
+         axios.post('https://jizhang-api-dev.it266.com/api/record/create?token='+localStorage.token,qs.stringify({
                         total_money:this.message1,
                         money:this.message2,
                         account_id:this.value3,
@@ -172,7 +172,7 @@ export default {
                 "Content-Type":"multipart/form-data"
             }
         }
-        axios.post('http://jizhang-api-dev.it266.com/api/upload/image?token='+localStorage.token,params,config)
+        axios.post('https://jizhang-api-dev.it266.com/api/upload/image?token='+localStorage.token,params,config)
         .then((res)=>{
             console.log(res)
             if(res.data.data.file){
@@ -192,7 +192,7 @@ export default {
           this.option1 = []
           this.option3 = []
         //   console.log(watchVal)
-          axios.get('http://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
+          axios.get('https://jizhang-api-dev.it266.com/api/category?token='+localStorage.token,{
               params:{
                   type:watchVal,
                   dataType:'1'
@@ -213,7 +213,7 @@ export default {
 
         //   获取账户信息
 
-        axios.get('http://jizhang-api-dev.it266.com/api/account?token='+localStorage.token)
+        axios.get('https://jizhang-api-dev.it266.com/api/account?token='+localStorage.token)
         .then((response)=>{
             // console.log(response)
             for(var i = 0; i<response.data.data.length;i++){
