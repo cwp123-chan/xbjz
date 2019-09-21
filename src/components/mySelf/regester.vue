@@ -76,7 +76,7 @@ export default {
       regester
   },methods:{
       getSrc(){
-            axios.get('http://jizhang-api-dev.it266.com/api/captcha')
+            axios.get('https://jizhang-api-dev.it266.com/api/captcha')
                 .then((res)=>{
                     // console.log(res.data.data.key)
                         this.src = res.data.data.url
@@ -87,7 +87,7 @@ export default {
       },
        pushData(){
 
-                axios.post('http://jizhang-api-dev.it266.com/api/sms/verify',qs.stringify({
+                axios.post('https://jizhang-api-dev.it266.com/api/sms/verify',qs.stringify({
                         mobile:this.mobileNum,
                         captcha_code:this.picyzm,
                         captcha_key:this.key
@@ -111,7 +111,7 @@ export default {
          
       },
       regester(){
-          axios.post('http://jizhang-api-dev.it266.com/api/user/register',qs.stringify({
+          axios.post('https://jizhang-api-dev.it266.com/api/user/register',qs.stringify({
               mobile:this.mobileNum,
               password:this.pwd,
               verify :this.infoNum
